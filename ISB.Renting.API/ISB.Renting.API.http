@@ -1,0 +1,6 @@
+@ISB.Renting.API_HostAddress = http://localhost:5224
+
+GET {{ISB.Renting.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
