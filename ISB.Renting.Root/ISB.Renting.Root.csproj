@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ISB.Renting.Cross\ISB.Renting.Cross.csproj" />
+    <ProjectReference Include="..\ISB.Renting.Business\ISB.Renting.Business.csproj" />
     <ProjectReference Include="..\ISB.Renting.Data\ISB.Renting.Data.csproj" />
-    <ProjectReference Include="..\ISB.Renting.Models\ISB.Renting.Models.csproj" />
   </ItemGroup>
 
 </Project>

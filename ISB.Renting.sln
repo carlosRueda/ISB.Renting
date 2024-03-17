@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISB.Renting.Models", "ISB.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISB.Renting.Cross", "ISB.Renting.Cross\ISB.Renting.Cross.csproj", "{124069FE-8E15-4571-AD0A-7C36084109F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISB.Renting.Data", "ISB.Renting.Data\ISB.Renting.Data.csproj", "{5E5A700D-0422-46CE-B9C7-A4C493FE580C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISB.Renting.Root", "ISB.Renting.Root\ISB.Renting.Root.csproj", "{F4FC13DF-59A4-48A0-86FE-58892020D2E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{124069FE-8E15-4571-AD0A-7C36084109F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{124069FE-8E15-4571-AD0A-7C36084109F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{124069FE-8E15-4571-AD0A-7C36084109F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5A700D-0422-46CE-B9C7-A4C493FE580C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5A700D-0422-46CE-B9C7-A4C493FE580C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5A700D-0422-46CE-B9C7-A4C493FE580C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5A700D-0422-46CE-B9C7-A4C493FE580C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4FC13DF-59A4-48A0-86FE-58892020D2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FC13DF-59A4-48A0-86FE-58892020D2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FC13DF-59A4-48A0-86FE-58892020D2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FC13DF-59A4-48A0-86FE-58892020D2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
