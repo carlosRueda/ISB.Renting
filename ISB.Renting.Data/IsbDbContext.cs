@@ -14,4 +14,26 @@ public class IsbDbContext : DbContext
     public IsbDbContext(DbContextOptions<IsbDbContext> options) : base(options)
     {
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Ownership>()
+            .ToTable("Ownership")
+            .Property(o => o.Price)
+            .HasColumnType("decimal(18,2)");
+
+        modelBuilder.Entity<PriceHistory>()
+            .ToTable("PriceHistory")
+            .Property(o => o.NewPrice)
+            .HasColumnType("decimal(18,2)"); 
+
+        modelBuilder.Entity<Property>()
+            .ToTable("Property")
+            .Property(o => o.Price)
+            .HasColumnType("decimal(18,2)");
+
+        modelBuilder.Entity<Contact>()
+            .ToTable("Contact");
+
+    }
 }

@@ -1,4 +1,6 @@
+using ISB.Renting.Data;
 using ISB.Renting.Root;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,12 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 CompositionRoot.injectDependencies(builder.Services, builder.Configuration);
 
 var app = builder.Build();
+
+//using(var scope = app.Services.CreateScope())
+//{
+//    var context = scope.ServiceProvider.GetRequiredService<IsbDbContext>();
+//    context.Database.Migrate();
+//}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
