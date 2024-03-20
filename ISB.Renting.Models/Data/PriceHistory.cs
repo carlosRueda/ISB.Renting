@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ISB.Renting.Models.Data;
 
-public class PriceHistory
+public class PriceHistory : IEntity
 {
     [Key]
     public Guid Id { get; set; }

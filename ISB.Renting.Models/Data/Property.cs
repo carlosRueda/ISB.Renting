@@ -2,10 +2,11 @@
 
 namespace ISB.Renting.Models.Data;
 
-public class Property
+public class Property : IEntity
 {
     [Key]
     public Guid Id { get; set; }
+    [MaxLength(100)]
     public string Name { get; set; }
     public string Address { get; set; }
     public decimal Price { get; set; }

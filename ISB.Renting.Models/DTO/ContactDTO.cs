@@ -1,19 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ISB.Renting.Models.Data;
+namespace ISB.Renting.Models.DTO;
 
-public class Contact : IEntity
+public class ContactDTO: IEntity
 {
-    [Key]
     public Guid Id { get; set; }
-    [MaxLength(50)]
+    [Length(0, 50)]
     public string FirstName { get; set; }
-    [MaxLength(50)]
+    [Length(0, 50)]
     public string LastName { get; set; }
-    [MaxLength(10)]
+    [Phone]
+    [Length(0, 10)]
     public string PhoneNumber { get; set; }
-    [MaxLength(50)]
+    [EmailAddress]
+    [Length(0, 50)]
     public string Email { get; set; }
-
-    public virtual ICollection<Ownership> Ownerships { get; } = new List<Ownership>();
 }

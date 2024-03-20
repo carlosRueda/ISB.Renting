@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ISB.Renting.Cross\ISB.Renting.Cross.csproj" />
     <ProjectReference Include="..\ISB.Renting.Data\ISB.Renting.Data.csproj" />
     <ProjectReference Include="..\ISB.Renting.Models\ISB.Renting.Models.csproj" />

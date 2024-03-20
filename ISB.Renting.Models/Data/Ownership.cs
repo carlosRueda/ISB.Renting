@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ISB.Renting.Models.Data;
 
-public class Ownership
+public class Ownership : IEntity
 {
     [Key]
     public Guid Id { get; set; }
@@ -13,8 +13,8 @@ public class Ownership
     public DateTime? EffectiveTill { get; set; }
 
     [ForeignKey("PropertyId")]
-    public virtual Property Property { get; set; } = new();
+    public virtual Property Property { get; set; } 
     
     [ForeignKey("ContactId")]
-    public virtual Contact Contact { get; set; } = new();
+    public virtual Contact Contact { get; set; } 
 }
