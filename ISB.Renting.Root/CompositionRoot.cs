@@ -6,8 +6,6 @@ using ISB.Renting.Data.Interface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ISB.Renting.Root;
 
@@ -24,9 +22,6 @@ public class CompositionRoot
                 b => b.MigrationsAssembly("ISB.Renting.Data")));
 
         services.AddTransient<IUnitOfWork, UnitOfWork>();
-        //services.AddTransient<IContactRepository, ContactRepository>();
-        //services.AddTransient<IPropertyRepository, PropertyRepository>();
-        //services.AddTransient<IPr, PropertyRepository>();
         services.AddTransient<IContactManager, ContactManager>();
         services.AddTransient<IPropertyManager, PropertyManager>();
         services.AddTransient<IDashboardManager, DashboardManager>();
