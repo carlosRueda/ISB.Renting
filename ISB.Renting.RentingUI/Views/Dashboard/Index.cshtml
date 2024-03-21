@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ISB.Renting.Models.DTO.DashboardResultDTO>
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Dashboard</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnershipId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AskingPriceFormated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Owner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfPurchase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoldPriceEurFormated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoldPriceUsdFormated)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnershipId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AskingPriceFormated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfPurchase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoldPriceEurFormated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoldPriceUsdFormated)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

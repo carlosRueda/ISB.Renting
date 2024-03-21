@@ -12,7 +12,7 @@ public class PaginatedResultDTO<T> where T : class
         get
         {
             decimal length = Length;
-            decimal size = Pagination.Size;
+            decimal size = Pagination.Size <= 0 ? 1 : Pagination.Size;
             decimal calculateValue = length / size;
             return calculateValue == 0 ? 1 : (int)Math.Round(calculateValue, MidpointRounding.ToPositiveInfinity);
         }

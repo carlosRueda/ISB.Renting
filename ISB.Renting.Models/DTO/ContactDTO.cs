@@ -9,7 +9,7 @@ public class ContactDTO: IEntity
     public string FirstName { get; set; }
     [Length(0, 50)]
     public string LastName { get; set; }
-    [Phone]
+    [RegularExpression(@"^\+\d{5,10}$", ErrorMessage = "Phone number has to have between 5 and 10 numbers and starts with +")]
     [Length(0, 10)]
     public string PhoneNumber { get; set; }
     [EmailAddress]
