@@ -9,7 +9,7 @@ public class DashboardResultDTO
     public string Owner { get; set; }
     public DateTime DateOfPurchase { get; set; }
     public decimal SoldPriceEur { get; set; }
-    public string SoldPriceEurFormated => $"EUR {AskingPrice.ToString("C")}";
+    public string SoldPriceEurFormated => $"EUR {SoldPriceEur.ToString("C")}";
     public decimal SoldPriceUsd { get; set; }
-    public string SoldPriceUsdFormated => $"USD {AskingPrice.ToString("C")}";
+    public string SoldPriceUsdFormated => $"USD {SoldPriceUsd.ToString("C")}";
 }
