@@ -63,5 +63,4 @@ public class ContactController : Controller
         var httpResponse = _client.Delete(_isbSettings.Get_Contacts_WithId_URL(id));
         return RedirectToAction(nameof(Index), new { page = 1, size = 50 });
     }
-
 }

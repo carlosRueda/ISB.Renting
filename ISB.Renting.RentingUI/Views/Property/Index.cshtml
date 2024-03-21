@@ -1,0 +1,68 @@
+﻿@model ISB.Renting.Models.DTO.PaginatedResultDTO<ISB.Renting.Models.DTO.PropertyDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                RegistrationDate
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Results)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistrationDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+                    @Html.ActionLink("Buy", "Buy", new { id = item.Id })
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="4">
+            </td>
+
+            <td colspan="2">
+                <b>page:</b> @Model.Pagination.Page | <b>Size:</b> @Model.Pagination.Size | <b>Length:</b> @Model.Length
+            </td>
+        </tr>
+    </tbody>
+</table>
